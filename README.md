@@ -85,3 +85,9 @@ This is a simple Chatbot Flow Builder using React and React Flow. The flow build
 - `react-dom`: Provides DOM-specific methods that can be used at the top level of a web app.
 - `react-flow-renderer`: A React component for building node-based applications.
 - `bootstrap`: CSS framework for developing responsive and mobile-first websites.
+
+## UI 
+
+![Create Connection](./src/assets/createConnection.png)
+![Edit Node]("./src/assets/editNode.png)
+![Save Connection]("./src/assets/saveConnection.png)

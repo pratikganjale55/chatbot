@@ -8,6 +8,21 @@ import {
 } from "reactflow";
 
 const Node = ({ data, selected }) => {
+  const { nodeInternals, edges } = useStore((st) => ({
+    nodeInternals: st.nodeInternals,
+    edges: st.edges,
+  }));
+
+  const nodeId = useNodeId();
+
+  const singleSourceConnect = useMemo(() => {
+    const node = nodeInternals.get(nodeId);
+    const connectedEdges = getConnectedEdges([node], edges);
+    const hasConnection = connectedEdges.some(
+      (edge) => edge.source === nodeId
+    );
+    return !hasConnection;
+  }, [nodeInternals, edges, nodeId]);
 
 return (
     <div>
@@ -31,7 +46,7 @@ return (
           type="source"
           position={Position.Bottom}
           id="h-2"
-          isConnectable={true}
+          isConnectable={singleSourceConnect}
           
         />
         <Handle type="target" position={Position.Top} id="h-1" isConnectable={true} />
