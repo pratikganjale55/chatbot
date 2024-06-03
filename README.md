@@ -89,5 +89,5 @@ This is a simple Chatbot Flow Builder using React and React Flow. The flow build
 ## UI 
 
 ![Create Connection](./src/assets/createConnection.png)
-![Edit Node]("./src/assets/editNode.png)
-![Save Connection]("./src/assets/saveConnection.png)
+![Edit Node](./src/assets/editNode.png)
+![Save Connection](./src/assets/saveConnection.png)
